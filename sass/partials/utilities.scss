@@ -8,7 +8,12 @@
     flex-direction: column;
 }
 
-@for $i from 1 through 20 {
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@for $i from 1 through 50 {
     .gap-#{$i} { gap: #{$i}px; }
 }
 
