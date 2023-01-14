@@ -9,14 +9,19 @@
     font-style: normal;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
     margin: 0;
     padding: 0;
 }
 
+a {
+    color: rgb(236, 231, 225);
+}
+
 body {
-    background-color: rgb(236,231,225);
-    color: rgb(26, 24, 24);
+    color: rgb(236, 231, 225);
+    background-color: rgb(26, 24, 24);
+
     font-family: Montserrat, sans-serif; 
 }
 
@@ -34,8 +39,8 @@ body {
 }
 
 ::selection {
-    color: white;
-    background: black;
+    color: black;
+    background-color: white;
 }
 
 .header-wrapper {
@@ -60,8 +65,6 @@ body {
 
     .project {
         min-height: 300px;
-        background-color: white;
-        box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.15);
         transition-duration: 1s;
         display: flex;
         flex-direction: column;
@@ -76,7 +79,7 @@ body {
         }
 
         &-description {
-            color: lighten(rgb(26, 24, 24), 33%);
+            opacity: 0.9;
         }
     }
 }
