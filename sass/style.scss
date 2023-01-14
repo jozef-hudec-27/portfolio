@@ -32,6 +32,7 @@ body {
     transition-timing-function: ease-out;
     transition-property: transform;
     transition-duration: 0.5s;
+    animation: appear 2s ease-in-out;
 
     &:hover {
         transform: translateX(40px) skew(-5deg);
@@ -63,6 +64,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
+    animation: slidein 2s;
 
     .project {
         min-height: 300px;
@@ -85,6 +87,29 @@ body {
     }
 }
 
+.home-link-wrapper {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90vh;
+
+    .home-link {
+        margin: 24px 0;
+        transform: rotate(-90deg);
+        text-decoration: none;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .line {
+        background-color: white;
+        width: 1px;
+        flex-grow: 1;
+    }
+}
+
 .about-me-wrapper {
     align-items: center;
     width: 50%;
@@ -101,7 +126,11 @@ body {
 img.me {
     max-width: 25vw;
     box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.2);
+    animation: appear 3s, grow 2s;
 }
+
+
+// MEDIA QUERIES
 
 @media (max-width: 500px) {
     .hero-text:hover {
@@ -117,5 +146,38 @@ img.me {
 
     img.me {
         max-width: 50vw;
+    }
+}
+
+
+// KEYFRAMES
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: (scale(0));
+    }
+
+    to {
+        transform: scale(1);
     }
 }
