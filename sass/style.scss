@@ -58,6 +58,7 @@ body {
         letter-spacing: 0.5px;
     }
 }
+
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -84,8 +85,37 @@ body {
     }
 }
 
+.about-me-wrapper {
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    gap: 8vw;
+
+    h1 {
+        font-family: grandslangroman;
+        font-size: 8vw;
+        font-weight: 300;
+    }
+}
+
+img.me {
+    max-width: 25vw;
+    box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.2);
+}
+
 @media (max-width: 500px) {
     .hero-text:hover {
         transform: translateX(10px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-me-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    img.me {
+        max-width: 50vw;
     }
 }
