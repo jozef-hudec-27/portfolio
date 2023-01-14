@@ -9,7 +9,7 @@ h1, h2, h3, p {
 
 body {
     background-color: rgb(236,231,225);
-    color: #1a1818;
+    color: rgb(26, 24, 24);
     font-family: Montserrat, sans-serif; 
 }
 
@@ -37,5 +37,32 @@ body {
         line-height: 1.9em;
         font-weight: 400;
         letter-spacing: 0.5px;
+    }
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+
+    .project {
+        min-height: 300px;
+        background-color: white;
+        box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.15);
+        transition-duration: 1s;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        &-info {
+            min-height: 33%;
+            margin-top: auto;
+        }
+
+        &-description {
+            color: lighten(rgb(26, 24, 24), 33%);
+        }
     }
 }
