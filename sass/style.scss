@@ -30,9 +30,8 @@ body {
     font-size: 10vw;
     text-transform: uppercase;
     transition-timing-function: ease-out;
-    transition-property: transform;
     transition-duration: 0.5s;
-    animation: appear 2s ease-in-out;
+    animation: appear 4s ease-in-out;
 
     &:hover {
         transform: translateX(40px) skew(-5deg);
@@ -64,7 +63,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
-    animation: slidein 2s;
 
     .project {
         min-height: 300px;
@@ -87,13 +85,13 @@ body {
     }
 }
 
-.home-link-wrapper {
+.page-link-wrapper {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     height: 90vh;
 
-    .home-link {
+    .page-link {
         margin: 24px 0;
         transform: rotate(-90deg);
         text-decoration: none;
@@ -127,6 +125,18 @@ img.me {
     max-width: 25vw;
     box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.2);
     animation: appear 3s, grow 2s;
+    transition-duration: 1s;
+
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+
+    &:hover {
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255, 0.4);
+
+        filter: none;
+        -webkit-filter: grayscale(0%);
+    }
 }
 
 
@@ -135,6 +145,10 @@ img.me {
 @media (max-width: 500px) {
     .hero-text:hover {
         transform: translateX(10px);
+    }
+
+    .page-link-wrapper {
+        display: none;
     }
 }
 
