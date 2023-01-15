@@ -17,6 +17,16 @@
     font-display: swap;
 }
 
+
+h1, h2 {
+    &:hover {
+        background: radial-gradient(circle, rgba(1,216,251,1) 0%, rgba(255,0,208,1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 h1, h2, h3, p, a {
     margin: 0;
     padding: 0;
