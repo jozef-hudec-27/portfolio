@@ -77,6 +77,14 @@ body {
         &-info {
             min-height: 33%;
             margin-top: auto;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: line-through;
+                }
+            }
         }
 
         &-description {
