@@ -108,16 +108,29 @@ body {
     }
 }
 
-.about-me-wrapper {
+.about-me-wrapper, .skills-wrapper {
     align-items: center;
     width: 50%;
     margin: 0 auto;
     gap: 8vw;
 
-    h1 {
+    h1, h2 {
         font-family: grandslangroman;
         font-size: 8vw;
         font-weight: 300;
+    }
+    
+    .logo {
+        height: 56px;
+    }
+}
+
+.skills-wrapper {
+    margin-top: 16px;
+    align-items: flex-start;
+
+    h2 {
+        transform: rotate(-90deg) translateX(-50%);
     }
 }
 
@@ -160,6 +173,16 @@ img.me {
 
     img.me {
         max-width: 50vw;
+    }
+
+    .skills-wrapper {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 32px;
+
+        h2 {
+            transform: unset;
+        }
     }
 }
 

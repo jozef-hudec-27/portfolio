@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.flex-align-start {
+    align-items: flex-start;
+}
+
 @for $i from 1 through 50 {
     .gap-#{$i} { gap: #{$i}px; }
 }
@@ -32,7 +36,7 @@
 
 // MARGIN
 
-@for $i from 0 through 20 {
+@for $i from 0 through 50 {
     .m-#{$i} { margin: #{$i}px; }
     .ml-#{$i} { margin-left: #{$i}px; }
     .mr-#{$i} { margin-right: #{$i}px; }
