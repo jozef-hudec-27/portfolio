@@ -51,7 +51,7 @@
 
 // FONTS
 
-@for $i from 1 through 9 {
+@for $i from 0 through 9 {
     .font-size-0#{$i} { font-size: calc(#{$i}em / 10); }
     .font-size-1#{$i} { font-size: calc(1#{$i}em / 10); }
     .font-size-2#{$i} { font-size: calc(2#{$i}em / 10); }

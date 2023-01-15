@@ -120,18 +120,42 @@ body {
         font-weight: 300;
     }
     
-    .logo {
-        height: 56px;
+    a:hover {
+        text-decoration: line-through;
     }
 }
 
 .skills-wrapper {
     margin-top: 16px;
     align-items: flex-start;
-
+    
     h2 {
         transform: rotate(-90deg) translateX(-50%);
     }
+}
+
+.skills-list-wrapper {
+    margin: 0 auto;
+    max-width: 80%;
+    margin-top: 16px;
+    position: relative;
+
+    .skills-list {
+        z-index: 2;
+        list-style: square;
+    }
+
+    .logo {
+        position: absolute;
+        opacity: 0.3;
+        height: 64px;
+        transition-property: transform;
+        transition-duration: 1s;
+    }
+}
+
+.logo {
+    height: 56px;
 }
 
 img.me {
