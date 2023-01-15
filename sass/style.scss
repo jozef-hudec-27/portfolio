@@ -29,7 +29,7 @@ a {
 body {
     color: rgb(236, 231, 225);
     background-color: rgb(26, 24, 24);
-
+    padding-bottom: 32px;
     font-family: montserratregular, sans-serif;
 }
 
@@ -192,6 +192,27 @@ img.me {
     }
 }
 
+.contacts-wrapper {
+    max-width: 25%;
+    margin: 0 auto;
+    transform: translateX(50%);
+    text-align: center;
+    margin-top: 16px;
+
+    h2 {
+        font-family: grandslangroman, sans-serif;
+        font-size: 4vw;
+    }
+
+    svg {
+        width: 48px;
+    }
+
+    .mail-svg-small {
+        display: none;
+    }
+}
+
 
 // MEDIA QUERIES
 
@@ -202,6 +223,20 @@ img.me {
 
     .page-link-wrapper {
         display: none;
+    }
+
+    .contacts-wrapper {
+        svg {
+            width: 24px;
+        }
+
+        .mail-svg-small {
+            display: block;
+        }
+
+        .mail-svg-big {
+            display: none;
+        }
     }
 }
 
@@ -223,6 +258,12 @@ img.me {
         h2 {
             transform: unset;
         }
+    }
+
+    .contacts-wrapper {
+        max-width: 50%;
+        transform: unset;
+        margin-top: 32px;
     }
 }
 

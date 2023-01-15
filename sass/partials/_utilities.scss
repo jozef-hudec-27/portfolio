@@ -17,6 +17,10 @@
     align-items: flex-start;
 }
 
+.flex-align-center {
+    align-items: center;
+}
+
 @for $i from 1 through 50 {
     .gap-#{$i} { gap: #{$i}px; }
 }
